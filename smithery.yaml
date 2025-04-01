@@ -19,10 +19,10 @@ startCommand:
       YOUTUBE_API_KEY:
         type: string
         description: YouTube Data API key for fetching video metadata (optional, can be provided in requests)
-      PORT:
-        type: string
-        description: Port to run the server on
-        default: "8000"
+      # PORT:
+      #   type: string
+      #   description: Port to run the server on
+      #   default: "8000"
     required: []
   commandFunction: |-
     (config) => ({

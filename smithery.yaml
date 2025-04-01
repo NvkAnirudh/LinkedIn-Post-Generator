@@ -1,17 +1,49 @@
-name: linkedin-post-generator
-description: MCP server for generating LinkedIn post drafts from YouTube videos
+# Smithery.ai configuration
+name: yt-to-linkedin-mcp
+description: Model Context Protocol server that automates generating LinkedIn post drafts from YouTube videos
 version: 1.0.0
 tags:
-  - mcp
-  - linkedin
   - youtube
+  - linkedin
   - content-generation
-env_vars:
-  - name: OPENAI_API_KEY
-    description: OpenAI API key for summarization and post generation
-    required: true
-  - name: YOUTUBE_API_KEY
-    description: YouTube API key (optional, used as fallback for transcript extraction)
-    required: false
-entrypoint: node src/index.js
-port: 8000
+  - mcp
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      OPENAI_API_KEY:
+        type: string
+        description: OpenAI API key for summarization and post generation (optional, can be provided in requests)
+      YOUTUBE_API_KEY:
+        type: string
+        description: YouTube Data API key for fetching video metadata (optional, can be provided in requests)
+      PORT:
+        type: string
+        description: Port to run the server on
+        default: "8000"
+    required: []
+  commandFunction: |-
+    (config) => ({
+      "command": "node",
+      "args": ["src/index.js"],
+      "env": {
+        "OPENAI_API_KEY": config.OPENAI_API_KEY || "",
+        "YOUTUBE_API_KEY": config.YOUTUBE_API_KEY || "",
+        "PORT": config.PORT || "8000"
+      }
+    })
+
+# Specify the MCP configuration
+mcp:
+  type: "stdio"
+
+resources:
+  cpu: 1
+  memory: 1Gi
+
+ports:
+  - name: http
+    port: 8000
+    protocol: TCP

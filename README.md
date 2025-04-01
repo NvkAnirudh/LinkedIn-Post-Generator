@@ -1,6 +1,6 @@
-# LinkedIn Post Generator MCP Server
+# YouTube to LinkedIn MCP Server
 
-    An MCP server that automates generating LinkedIn post drafts from YouTube videos. The server extracts transcripts from YouTube videos, summarizes the content, and generates professional LinkedIn post drafts.
+    A Model Context Protocol (MCP) server that automates generating LinkedIn post drafts from YouTube videos. The server extracts transcripts from YouTube videos, summarizes the content, and generates professional LinkedIn post drafts.
 
     ## Features
 
@@ -16,7 +16,7 @@
     1. Clone the repository:
        ```
        git clone <repository-url>
-       cd linkedin-post-generator
+       cd yt-to-linkedin-mcp
        ```
 
     2. Install dependencies:
@@ -34,27 +34,16 @@
        npm run inspect
        ```
 
-    ### Docker Deployment
+    ### Smithery Deployment
 
-    1. Build the Docker image:
-       ```
-       docker build -t linkedin-post-generator .
-       ```
-
-    2. Run the container:
-       ```
-       docker run -p 8000:8000 linkedin-post-generator
-       ```
+    This server is configured for deployment on Smithery using the included `smithery.yaml` file.
 
     ## API Keys
 
-    This application requires API keys to function. Instead of setting them as environment variables, you can provide them directly through the MCP interface:
+    This application requires API keys to function. You can provide them in two ways:
 
-    1. First, use the `set_api_keys` tool to provide your API keys:
-       - `openaiApiKey`: Your OpenAI API key (required)
-       - `youtubeApiKey`: Your YouTube API key (optional)
-
-    2. You can check the status of your API keys using the `check_api_keys` tool.
+    1. As environment variables (OPENAI_API_KEY, YOUTUBE_API_KEY)
+    2. Directly through the MCP interface using the `set_api_keys` tool
 
     ## MCP Tools
 
@@ -87,16 +76,6 @@
     - Tool: `youtube_to_linkedin_post`
     - Input: YouTube URL and post customization options
     - Output: Complete workflow result including transcript, summary, and post
-
-    ## Deployment on Smithery and Glama
-
-    This server is designed to be deployed on both Smithery and Glama platforms:
-
-    ### Smithery Deployment
-    Use the included `smithery.yaml` configuration file for deployment.
-
-    ### Glama Deployment
-    Follow the standard Glama deployment process using the provided Dockerfile.
 
     ## License
 

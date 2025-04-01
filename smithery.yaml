@@ -1,0 +1,17 @@
+name: linkedin-post-generator
+description: MCP server for generating LinkedIn post drafts from YouTube videos
+version: 1.0.0
+tags:
+  - mcp
+  - linkedin
+  - youtube
+  - content-generation
+env_vars:
+  - name: OPENAI_API_KEY
+    description: OpenAI API key for summarization and post generation
+    required: true
+  - name: YOUTUBE_API_KEY
+    description: YouTube API key (optional, used as fallback for transcript extraction)
+    required: false
+entrypoint: node src/index.js
+port: 8000

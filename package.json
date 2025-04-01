@@ -1,0 +1,21 @@
+{
+      "name": "linkedin-post-generator",
+      "version": "1.0.0",
+      "type": "module",
+      "bin": {
+        "linkedin-post-generator": "src/index.js"
+      },
+      "scripts": {
+        "start": "node src/index.js",
+        "dev": "node --watch src/index.js",
+        "inspect": "npx -y @modelcontextprotocol/inspector node src/index.js"
+      },
+      "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.0.0",
+        "dotenv": "^16.3.1",
+        "node-fetch": "^3.3.2",
+        "openai": "^4.20.1",
+        "youtube-transcript": "^1.0.6",
+        "zod": "^3.22.4"
+      }
+    }

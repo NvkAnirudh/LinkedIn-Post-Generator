@@ -65,7 +65,7 @@ A Model Context Protocol (MCP) server that automates generating professional Lin
 
 This MCP server is designed to work with Claude Desktop and other AI assistants that support the Model Context Protocol. To use it with Claude Desktop:
 
-1. Install the LinkedIn Post Generator MCP server from Smithery:
+1. Install the LinkedIn Post Generator MCP server from [Smithery](https://smithery.ai/server/@NvkAnirudh/linkedin-post-generator):
    ```bash
    npx -y @smithery/cli install yt-to-linkedin-mcp --client claude
    ```

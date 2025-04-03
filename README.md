@@ -1,6 +1,6 @@
 # LinkedIn Post Generator
 
-[![Smithery Badge](https://img.shields.io/badge/Deployed%20on-Smithery-blue)](https://smithery.ai)
+[![smithery badge](https://smithery.ai/badge/@NvkAnirudh/linkedin-post-generator)](https://smithery.ai/server/@NvkAnirudh/linkedin-post-generator)
 
 A Model Context Protocol (MCP) server that automates generating professional LinkedIn post drafts from YouTube videos. This tool streamlines content repurposing by extracting transcripts from YouTube videos, summarizing the content, and generating engaging LinkedIn posts tailored to your preferences.
 

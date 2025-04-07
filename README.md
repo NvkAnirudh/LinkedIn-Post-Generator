@@ -156,6 +156,51 @@ To deploy your own instance:
    smithery deploy
    ```
 
+## Contributing
+
+Contributions are welcome and appreciated! Here's how you can contribute to the LinkedIn Post Generator:
+
+### Reporting Issues
+
+- Use the [GitHub issue tracker](https://github.com/NvkAnirudh/LinkedIn-Post-Generator/issues) to report bugs or suggest features
+- Please provide detailed information about the issue, including steps to reproduce, expected behavior, and actual behavior
+- Include your environment details (OS, Node.js version, etc.) when reporting bugs
+
+### Pull Requests
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature-name`)
+3. Make your changes
+4. Run tests to ensure your changes don't break existing functionality
+5. Commit your changes (`git commit -m 'Add some feature'`)
+6. Push to the branch (`git push origin feature/your-feature-name`)
+7. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Write clear, commented code
+- Include tests for new features
+- Update documentation to reflect your changes
+
+### Feature Suggestions
+
+If you have ideas for new features or improvements:
+
+1. Check existing issues to see if your suggestion has already been proposed
+2. If not, open a new issue with the label 'enhancement'
+3. Clearly describe the feature and its potential benefits
+
+### Documentation
+
+Improvements to documentation are always welcome:
+
+- Fix typos or clarify existing documentation
+- Add examples or use cases
+- Improve the structure or organization of the documentation
+
+By contributing to this project, you agree that your contributions will be licensed under the project's MIT License.
+
 ## License
 
 [MIT](https://github.com/NvkAnirudh/LinkedIn-Post-Generator/blob/main/LICENSE)

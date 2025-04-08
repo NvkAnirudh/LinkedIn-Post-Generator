@@ -2,6 +2,16 @@
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { server } from './server.js';
 import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
+
+/**
+ * LinkedIn Post Generator MCP Server
+ * 
+ * Configuration Requirements:
+ * - OPENAI_API_KEY: Required for generating content
+ * - YOUTUBE_API_KEY: Optional for enhanced YouTube data fetching
+ */
 
 // Load environment variables (but they're now optional)
 dotenv.config();

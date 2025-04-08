@@ -1,0 +1,20 @@
+{
+  "name": "linkedin-post-generator",
+  "description": "Generate LinkedIn post drafts from YouTube videos",
+  "version": "1.0.0",
+  "type": "mcp",
+  "configSchema": {
+    "type": "object",
+    "required": ["OPENAI_API_KEY"],
+    "properties": {
+      "OPENAI_API_KEY": {
+        "type": "string",
+        "description": "Your OpenAI API key (required)"
+      },
+      "YOUTUBE_API_KEY": {
+        "type": "string",
+        "description": "Your YouTube API key (optional)"
+      }
+    }
+  }
+}

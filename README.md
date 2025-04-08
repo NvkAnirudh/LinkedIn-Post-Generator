@@ -65,14 +65,38 @@ A Model Context Protocol (MCP) server that automates generating professional Lin
 
 This MCP server is designed to work with Claude Desktop and other AI assistants that support the Model Context Protocol. To use it with Claude Desktop:
 
-1. Install the LinkedIn Post Generator MCP server from [Smithery](https://smithery.ai/server/@NvkAnirudh/linkedin-post-generator):
-   ```bash
-   npx -y @smithery/cli install yt-to-linkedin-mcp --client claude
+1. Configure Claude Desktop by editing the configuration file at `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+
+   ```json
+   {
+     "mcpServers": {
+       "linkedin-post-generator": {
+         "command": "npx",
+         "args": [
+           "-y",
+           "@smithery/cli@latest",
+           "run",
+           "@NvkAnirudh/linkedin-post-generator",
+           "--key",
+           "YOUR_SMITHERY_API_KEY",
+           "--config",
+           "{\"OPENAI_API_KEY\":\"YOUR_OPENAI_API_KEY\",\"YOUTUBE_API_KEY\":\"YOUR_YOUTUBE_API_KEY\"}",
+           "--transport",
+           "stdio"
+         ]
+       }
+     }
+   }
    ```
+
+   Replace:
+   - `YOUR_SMITHERY_API_KEY` with your Smithery API key
+   - `YOUR_OPENAI_API_KEY` with your OpenAI API key
+   - `YOUR_YOUTUBE_API_KEY` with your YouTube API key (optional)
 
 2. Restart Claude Desktop
 
-3. In Claude Desktop, you can now access the LinkedIn Post Generator tools
+3. In Claude Desktop, you can now access the LinkedIn Post Generator tools without needing to set API keys again
 
 ## Configuration
 
@@ -81,9 +105,23 @@ The application requires API keys to function properly:
 1. **OpenAI API Key** (required): Used for content summarization and post generation
 2. **YouTube API Key** (optional): Enhances YouTube metadata retrieval
 
-You can provide these keys in two ways:
-- As environment variables in a `.env` file
-- Directly through the MCP interface using the `set_api_keys` tool
+You can provide these keys in three ways:
+
+### 1. Via Claude Desktop Configuration (Recommended)
+
+When using with Claude Desktop and Smithery, the best approach is to include your API keys in the Claude Desktop configuration file as shown in the [Using with Claude Desktop](#using-with-claude-desktop) section. This way, the keys are automatically passed to the MCP server, and you don't need to set them again.
+
+### 2. As Environment Variables
+
+When running locally, you can set API keys as environment variables in a `.env` file:
+```
+OPENAI_API_KEY=your_openai_api_key
+YOUTUBE_API_KEY=your_youtube_api_key
+```
+
+### 3. Using the Set API Keys Tool
+
+If you haven't provided API keys through the configuration or environment variables, you can set them directly through the MCP interface using the `set_api_keys` tool.
 
 ## Usage
 

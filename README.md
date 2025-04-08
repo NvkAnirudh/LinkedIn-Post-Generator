@@ -4,6 +4,10 @@
 
 A Model Context Protocol (MCP) server that automates generating professional LinkedIn post drafts from YouTube videos. This tool streamlines content repurposing by extracting transcripts from YouTube videos, summarizing the content, and generating engaging LinkedIn posts tailored to your preferences.
 
+<a href="https://glama.ai/mcp/servers/@NvkAnirudh/LinkedIn-Post-Generator">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@NvkAnirudh/LinkedIn-Post-Generator/badge" />
+</a>
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)

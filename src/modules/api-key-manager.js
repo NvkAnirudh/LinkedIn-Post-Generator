@@ -3,8 +3,17 @@
      */
     export class ApiKeyManager {
       constructor() {
+        // Initialize API keys from environment variables
         this.openaiApiKey = process.env.OPENAI_API_KEY || null;
         this.youtubeApiKey = process.env.YOUTUBE_API_KEY || null;
+        
+        // Log initialization status
+        if (this.openaiApiKey) {
+          console.log('OpenAI API key initialized from environment');
+        }
+        if (this.youtubeApiKey) {
+          console.log('YouTube API key initialized from environment');
+        }
       }
       
       /**

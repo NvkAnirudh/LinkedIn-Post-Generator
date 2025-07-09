@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nvkanirudh-linkedin-post-generator-badge.png)](https://mseep.ai/app/nvkanirudh-linkedin-post-generator)
+
 # LinkedIn Post Generator
 
 [![smithery badge](https://smithery.ai/badge/@NvkAnirudh/linkedin-post-generator)](https://smithery.ai/server/@NvkAnirudh/linkedin-post-generator)
